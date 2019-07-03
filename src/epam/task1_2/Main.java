@@ -71,8 +71,13 @@ public class Main {
 	}
 	
 	//The third task 
-	public static boolean isVowel(char letter) {
-		
+	public static boolean isVowelOptionOne(char letter) {
+		char []arrayVowelLetter = {'a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'};
+		for(int i = 0; i < arrayVowelLetter.length; i++) {
+			if(letter == arrayVowelLetter[i]) {
+				return true;
+			}
+		}
 		return false;
 	}
 	
@@ -186,12 +191,13 @@ public class Main {
 		// The second task
 		int age = 500;
 		int amountOfHeads = amountOfHeads(age);
-		System.out.println("Количество голов : " + amountOfHeads);
-		System.out.println("Количетво глаз : " + amountOfEyes(amountOfHeads));
+		System.out.println("Amount of heads are : " + amountOfHeads + "heads.");
+		System.out.println("Amount of eyes are : " + amountOfEyes(amountOfHeads) + "eyes.");
 		
 		// The third task
 		
 		char letter = 'a';
+		System.out.println("Is the letter vowel? - " + isVowelOptionOne(letter));
 		
 		// The fourth task
 		

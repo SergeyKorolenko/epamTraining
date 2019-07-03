@@ -3,7 +3,7 @@ package epam.task1_1;
 public class Launcher {
 	
 	private static final int N = 4; // constant for the fourth task
-	private static final int AMOUNT_OF_NUMERAL = 6; // constant for the fifth task
+	private static final int AMOUNT_OF_NUMERALS = 6; // constant for the fifth task
 	private static final int COUNT_OF_STEPS = 7; // constant for the sixth task
 	
 	// The first task
@@ -61,7 +61,7 @@ public class Launcher {
 	// The fifth task
 	
 	public static void calculateMeansOfNumbers(int number) {
-		int []array = new int[AMOUNT_OF_NUMERAL];
+		int []array = new int[AMOUNT_OF_NUMERALS];
 		int step = 10;
 		for(int i = 0; i < array.length; i++) {
 			array[i] = number % step;
@@ -73,8 +73,8 @@ public class Launcher {
 			geometricMean *= array[i];
 			arithmeticMean += array[i];
 		}
-		geometricMean = Math.pow(geometricMean, 1.0/AMOUNT_OF_NUMERAL);
-		arithmeticMean /= AMOUNT_OF_NUMERAL;
+		geometricMean = Math.pow(geometricMean, 1.0/AMOUNT_OF_NUMERALS);
+		arithmeticMean /= AMOUNT_OF_NUMERALS;
 		System.out.println("Àrithmetic mean is : " + arithmeticMean);
 		System.out.println("Geometric mean is : " + geometricMean);
 	}
