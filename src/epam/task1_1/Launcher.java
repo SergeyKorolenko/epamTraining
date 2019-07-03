@@ -2,36 +2,36 @@ package epam.task1_1;
 
 public class Launcher {
 	
-	private static final int N = 4; // константа для 4-ой задачи
-	private static final int AMOUNT_OF_NUMBERS = 6; // константа для 5-ой задачи
-	private static final int COUNT_OF_STEPS = 7; // константа для 6-ой задачи
+	private static final int N = 4; // constant for the fourth task
+	private static final int AMOUNT_OF_NUMERAL = 6; // constant for the fifth task
+	private static final int COUNT_OF_STEPS = 7; // constant for the sixth task
 	
-	// 1-я задача
+	// The first task
 	public static void checkNumbers(double a, double b, double c) {
 		if(a == b && a == c){
-			System.out.println("Числа одинаковы");
+			System.out.println("The numbers are te same.");
 		} else if(a == b || a == c || b == c) {
-			System.out.println("Два числа из трех одинаковы");
+			System.out.println("Two numbers are the same.");
 		} else {
-			System.out.println("Числа различны");
+			System.out.println("The numbers are different.");
 		}
 	}
 	
-	// 2-я задача
+	// The second task
 	public static void transferWeight(double weightKilogram) {
-		System.out.println("Вес динозавтра в миллиграммах : " + weightKilogram * 1000000 );
-		System.out.println("Вес динозавтра в граммах : " + weightKilogram * 1000 );
-		System.out.println("Вес динозавтра в тоннах : " + weightKilogram / 1000 );
+		System.out.println("Dinosaur weight in milligrams is : " + weightKilogram * 1000000 + " milligrams.");
+		System.out.println("Dinosaur weight in grams is : " + weightKilogram * 1000 + "grams.");
+		System.out.println("Dinosaur weight in tons is : " + weightKilogram / 1000 + "tones.");
 	}
 	
-	// 3-я задача
+	// The third task
 	public static void findRingSquare(double r1, double r2) {
 		
 		double square = Math.PI * Math.abs((Math.pow(r1, 2) - Math.pow(r2, 2)));
-		System.out.println("Площадь кольца равна : " + square + " квадратных единиц");
+		System.out.println("The square of the ring is : " + square + " square units.");
 	}
 	
-	// 4-я задача
+	// The fourth task
 	public static void checkSequenceOfNumbers(int fourDigitNumber) {	
 		int []array = new int[N];
 		for(int i = array.length - 1; i >= 0; i--) {
@@ -49,37 +49,37 @@ public class Launcher {
 		}
 		
 		if(temp == array.length - 1) {
-			System.out.println("Цифры четырехзначного числа образуют возрастающую последовательность");
+			System.out.println("Numerals of four digit number form an increasing sequence.");
 		} else if(Math.abs(temp) == array.length - 1) {
-			System.out.println("Цифры четырехзначного числа образуют убывающую последовательность");
+			System.out.println("Numerals of four digit number form a descending sequence.");
 		} else {
-			System.out.println("Цифры четырехзначного числа образуют не образуют никакой последовательности");
+			System.out.println("Numerals of four digit number do not form a sequence.");
 		}
 		
 	}
 	
-	// 5-я задача
+	// The fifth task
 	
 	public static void calculateMeansOfNumbers(int number) {
-		int []array = new int[AMOUNT_OF_NUMBERS];
+		int []array = new int[AMOUNT_OF_NUMERAL];
 		int step = 10;
 		for(int i = 0; i < array.length; i++) {
 			array[i] = number % step;
 			number /= step;
 		}
 		double geometricMean = 1;
-		double average = 0;
+		double arithmeticMean = 0;
 		for(int i = 0; i < array.length; i++) {
 			geometricMean *= array[i];
-			average += array[i];
+			arithmeticMean += array[i];
 		}
-		geometricMean = Math.pow(geometricMean, 1.0/AMOUNT_OF_NUMBERS);
-		average /= AMOUNT_OF_NUMBERS;
-		System.out.println("Cреднее арифметическое равно : " + average);
-		System.out.println("Cреднее геометрическое равно : " + geometricMean);
+		geometricMean = Math.pow(geometricMean, 1.0/AMOUNT_OF_NUMERAL);
+		arithmeticMean /= AMOUNT_OF_NUMERAL;
+		System.out.println("Аrithmetic mean is : " + arithmeticMean);
+		System.out.println("Geometric mean is : " + geometricMean);
 	}
 	
-	// 6-я задача
+	// The sixth task
 	
 	public static void reversNumbers(int number){
 		int reversNumber = 0;
@@ -92,10 +92,10 @@ public class Launcher {
 			factor /= 10;
 			i++;
 		}
-		 System.out.print("Перевернутое число : " + reversNumber);
+		 System.out.print("Revers number is : " + reversNumber + ".");
 	}
 	
-	// 7-я задача
+	// The seventh task
 	
 	public static void swapTwoNumbers(int a, int b) {
 		if(a > b) {
@@ -107,47 +107,46 @@ public class Launcher {
 			a += b;
 			b = a - b;
 		} else {
-			System.out.println("Числа одинаковы");
+			System.out.println("The numbers are the same.");
 		}		 
 	}
 	
 	public static void main(String[] args){
 		
-		// 1-я задача
-		double a = 2.01; // Первое число
-		double b = 2.2; // Второе число
-		double c = 2.0; //	Третье число
+		// The first task
+		double a = 2.01; 
+		double b = 2.2; 
+		double c = 2.0; 
 		
 		checkNumbers(a, b, c);
 		
-		// 2-я задача
-		double weightKilogram = 50.5; // Вес динозавра в килограммах
+		// The second task
+		double weightKilogram = 50.5; 
 		
 		transferWeight(weightKilogram);
 		
-		// 3-я задача
-		double r1 = 4.5; // Больший радиус
-		double r2 = 2.2; // Меньший радиус
+		// The third task
+		double r1 = 4.5;
+		double r2 = 2.2; 
 		
 		findRingSquare(r1, r2);
 		
-		// 4-я задача
-		int forDigitNumber = 1234; // Четырехзначное число
+		// The fourth task
+		int forDigitNumber = 1234; 
 		
 		checkSequenceOfNumbers(forDigitNumber);
 		
-		// 5-я задача
+		// The fifth task
 		int sixDigitNumber = 123456;
 		
 		calculateMeansOfNumbers(123456);
 		
-		// 6-я задача
-		
+		// The sixth task
 		int sevenDigitNumber = 1234567;
 		
 		reversNumbers(sevenDigitNumber);
 		
-		// 7-я задача
+		// The seventh task
 		int d = 5;
 		int e = 6;
 		

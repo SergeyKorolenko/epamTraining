@@ -9,7 +9,7 @@ public class Main {
 	private static final int AMOUNT_OF_HEADS_ATER_301 = 1;
 	private static final double ACCURACY = 0.00001;
 	
-	// 1-€ задача
+	// The first task
 	
 	public static boolean[] isTriangle(double x1, double y1, double x2, double y2, double x3, double y3) {
 		boolean []is = new boolean[2];
@@ -49,7 +49,7 @@ public class Main {
 		return Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
 	}
 	
-	// 2-€ задача
+	// The second task
 	
 	private static int amountOfHeads(int age) {
 		int amountOfHeads = FIRST_AMOUNT_OF_HEADS;
@@ -70,13 +70,13 @@ public class Main {
 		return amountOfHeads * AMOUNT_OF_EYES_ON_ONE_HEAD;
 	}
 	
-	// 3-€ задача
+	//The third task 
 	public static boolean isVowel(char letter) {
 		
 		return false;
 	}
 	
-	// 4-€ задача
+	// The fourth task
 	public static int[] findNextDate(int day, int month, int year){
 		int []newDate = new int[3];
 		int tempCountOfDays = 0;
@@ -170,7 +170,7 @@ public class Main {
 	
 	public static void main(String[] args) {
 		
-		// 1-€ задача
+		// The first task
 		
 		double x1 = 1;
 		double y1 = 1;
@@ -183,17 +183,17 @@ public class Main {
 			System.out.println(isBool);
 		}
 		
-		// 2-€ задача
+		// The second task
 		int age = 500;
 		int amountOfHeads = amountOfHeads(age);
 		System.out.println(" оличество голов : " + amountOfHeads);
 		System.out.println(" оличетво глаз : " + amountOfEyes(amountOfHeads));
 		
-		// 3-€ задача
+		// The third task
 		
 		char letter = 'a';
 		
-		// 4-€ задача
+		// The fourth task
 		
 		int day = 31;
 		int month = 12;
