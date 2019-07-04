@@ -7,10 +7,20 @@ public class Launcher {
 	private static final int COUNT_OF_STEPS = 7; // constant for the sixth task
 	
 	// The first task
-	public static void checkNumbers(double a, double b, double c) {
+	public static int checkNumbers(double a, double b, double c) {
 		if(a == b && a == c){
-			System.out.println("The numbers are te same.");
+			return 0;
 		} else if(a == b || a == c || b == c) {
+			return 1;
+		} else {
+			return -1;
+		}
+	}
+	
+	public static void printResult(int result){
+		if(result == 0){
+			System.out.println("The numbers are te same.");
+		} else if(result == 1) {
 			System.out.println("Two numbers are the same.");
 		} else {
 			System.out.println("The numbers are different.");
@@ -20,13 +30,12 @@ public class Launcher {
 	// The second task
 	public static void transferWeight(double weightKilogram) {
 		System.out.println("Dinosaur weight in milligrams is : " + weightKilogram * 1000000 + " milligrams.");
-		System.out.println("Dinosaur weight in grams is : " + weightKilogram * 1000 + "grams.");
-		System.out.println("Dinosaur weight in tons is : " + weightKilogram / 1000 + "tones.");
+		System.out.println("Dinosaur weight in grams is : " + weightKilogram * 1000 + " grams.");
+		System.out.println("Dinosaur weight in tons is : " + weightKilogram / 1000 + " tones.");
 	}
 	
 	// The third task
 	public static void findRingSquare(double r1, double r2) {
-		
 		double square = Math.PI * Math.abs((Math.pow(r1, 2) - Math.pow(r2, 2)));
 		System.out.println("The square of the ring is : " + square + " square units.");
 	}
@@ -34,9 +43,10 @@ public class Launcher {
 	// The fourth task
 	public static void checkSequenceOfNumbers(int fourDigitNumber) {	
 		int []array = new int[N];
+		int step = 10;
 		for(int i = array.length - 1; i >= 0; i--) {
-			array[i] = fourDigitNumber % 10;
-			fourDigitNumber /= 10;
+			array[i] = fourDigitNumber % step;
+			fourDigitNumber /= step;
 		}
 		int temp = 0;
 		for(int i = 0; i < array.length - 1 ; i++) {
@@ -63,18 +73,16 @@ public class Launcher {
 	public static void calculateMeansOfNumbers(int number) {
 		int []array = new int[AMOUNT_OF_NUMERALS];
 		int step = 10;
+		double arithmeticMean = 0;
+		double geometricMean = 1;
 		for(int i = 0; i < array.length; i++) {
 			array[i] = number % step;
 			number /= step;
-		}
-		double geometricMean = 1;
-		double arithmeticMean = 0;
-		for(int i = 0; i < array.length; i++) {
-			geometricMean *= array[i];
 			arithmeticMean += array[i];
+			geometricMean *= array[i];
 		}
-		geometricMean = Math.pow(geometricMean, 1.0/AMOUNT_OF_NUMERALS);
 		arithmeticMean /= AMOUNT_OF_NUMERALS;
+		geometricMean = Math.pow(geometricMean, 1.0/AMOUNT_OF_NUMERALS);
 		System.out.println("Àrithmetic mean is : " + arithmeticMean);
 		System.out.println("Geometric mean is : " + geometricMean);
 	}
@@ -98,17 +106,9 @@ public class Launcher {
 	// The seventh task
 	
 	public static void swapTwoNumbers(int a, int b) {
-		if(a > b) {
-			a -= b;
-			b += a;
-			a = b - a;
-		} else if(a < b) {
-			b -= a;
-			a += b;
-			b = a - b;
-		} else {
-			System.out.println("The numbers are the same.");
-		}		 
+		a += b;
+		b = a - b;
+		a -= b;	
 	}
 	
 	public static void main(String[] args){
@@ -118,7 +118,7 @@ public class Launcher {
 		double b = 2.2; 
 		double c = 2.0; 
 		
-		checkNumbers(a, b, c);
+		printResult(checkNumbers(a, b, c));
 		
 		// The second task
 		double weightKilogram = 50.5; 
