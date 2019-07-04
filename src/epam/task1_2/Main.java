@@ -193,14 +193,14 @@ public class Main {
 			if(month == 12){
 				finalDate[0] = 1;
 				finalDate[1] = 1;
-				finalDate[2] = year + 1;
+				finalDate[2] = ++year;
 			} else {
 				finalDate[0] = 1;
-				finalDate[1] = month + 1;
-				finalDate[2] = year + 1;
+				finalDate[1] = ++month;
+				finalDate[2] = ++year;
 			}
 		} else {
-			finalDate[0] = day + 1;
+			finalDate[0] = ++day;
 			finalDate[1] = month;
 			finalDate[2] = year;
 		}
