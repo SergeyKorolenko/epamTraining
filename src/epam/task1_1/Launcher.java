@@ -71,15 +71,15 @@ public class Launcher {
 	// The fifth task
 	
 	public static void calculateMeansOfNumbers(int number) {
-		int []array = new int[AMOUNT_OF_NUMERALS];
+		int tempNumber = 0;
 		int step = 10;
 		double arithmeticMean = 0;
 		double geometricMean = 1;
-		for(int i = 0; i < array.length; i++) {
-			array[i] = number % step;
+		for(int i = 0; i < AMOUNT_OF_NUMERALS; i++) {
+			tempNumber = number % step;
 			number /= step;
-			arithmeticMean += array[i];
-			geometricMean *= array[i];
+			arithmeticMean += tempNumber;
+			geometricMean *= tempNumber;
 		}
 		arithmeticMean /= AMOUNT_OF_NUMERALS;
 		geometricMean = Math.pow(geometricMean, 1.0/AMOUNT_OF_NUMERALS);
