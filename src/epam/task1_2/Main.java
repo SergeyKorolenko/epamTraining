@@ -83,14 +83,35 @@ public class Main {
 	}
 	
 	public static boolean isVowelOptionTwo(char letter){
+		letter = Character.toLowerCase(letter);
+		switch(letter){
+			case 'a':
+				return true;
+			case 'e':
+				return true;
+			case 'i':
+				return true;
+			case 'o':
+				return true;
+			case 'u':
+				return true;
+		}
 		return false;
 	}
 	
 	public static boolean isVowelOptionThree(char letter){
+		letter = Character.toLowerCase(letter);
+		if(letter == 'a' || letter == 'e' || letter == 'i' || letter == 'o' || letter == 'u'){
+			return true;
+		}
 		return false;
 	}
 	
 	public static boolean isVowelOptionFour(char letter){
+		String checkString = "aeiouAEIOU";
+		if(checkString.contains(Character.toString(letter))) {
+			return true;
+		}
 		return false;
 	}
 	
