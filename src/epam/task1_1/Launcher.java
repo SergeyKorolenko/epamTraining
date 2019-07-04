@@ -97,7 +97,7 @@ public class Launcher {
 		while(i < COUNT_OF_STEPS){
 			reversNumber += (number % step) * factor;
 			number /= step;
-			factor /= 10;
+			factor /= step;
 			i++;
 		}
 		 System.out.print("Revers number is : " + reversNumber + ".");
@@ -139,7 +139,7 @@ public class Launcher {
 		// The fifth task
 		int sixDigitNumber = 123456;
 		
-		calculateMeansOfNumbers(123456);
+		calculateMeansOfNumbers(sixDigitNumber);
 		
 		// The sixth task
 		int sevenDigitNumber = 1234567;
