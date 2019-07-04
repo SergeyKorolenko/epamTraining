@@ -83,7 +83,6 @@ public class Launcher {
 	}
 	
 	// The fifth task
-	
 	private static boolean isSixDigitNumber(int sixDigitNumber){
 		return sixDigitNumber >= MIN_SIX_DIGIT_NUMBER && sixDigitNumber <= MAX_SIX_DIGIT_NUMBER ? true : false;
 	}
@@ -105,7 +104,6 @@ public class Launcher {
 	}
 	
 	// The sixth task
-	
 	private static boolean isSevenDigitNumber(int sevenDigitNumber){
 		return sevenDigitNumber >= MIN_SEVEN_DIGIT_NUMBER && sevenDigitNumber <= MAX_SEVEN_DIGIT_NUMBER ? true : false;
 	}
@@ -124,7 +122,6 @@ public class Launcher {
 	}
 	
 	// The seventh task
-	
 	public static void swapTwoNumbers(int a, int b) {
 		a += b;
 		b = a - b;

@@ -10,7 +10,6 @@ public class Main {
 	private static final double ACCURACY = 0.00001;
 	
 	// The first task
-	
 	public static boolean[] isTriangle(double x1, double y1, double x2, double y2, double x3, double y3) {
 		boolean []is = new boolean[2];
 		if(x1 == x2 && x1 == x3){
@@ -50,10 +49,9 @@ public class Main {
 	}
 	
 	// The second task
-	
 	private static int amountOfHeads(int age) {
 		int amountOfHeads = FIRST_AMOUNT_OF_HEADS;
-		for(int i = 0; i < age; i++){
+		for(int i = 1; i <= age; i++){
 			if(i < 200){
 				amountOfHeads += AMOUNT_OF_HEADS_BEFORE_200;
 			} else if(i >= 200 && i < 300) {
@@ -210,7 +208,6 @@ public class Main {
 	public static void main(String[] args) {
 		
 		// The first task
-		
 		double x1 = 1;
 		double y1 = 1;
 		double x2 = 1;
@@ -218,29 +215,28 @@ public class Main {
 		double x3 = 5;
 		double y3 = 3;
 		boolean []is = isTriangle(x1, y1, x2, y2, x3, y3);
-		for(boolean isBool: is){
-			System.out.println(isBool);
-		}
+		System.out.println("Is triangle : " + is[0]);
+		System.out.println("Is right triangle : " + is[1]);
 		
 		// The second task
-		int age = 500;
+		int age = 200;
 		int amountOfHeads = amountOfHeads(age);
 		System.out.println("Amount of heads are : " + amountOfHeads + " heads.");
 		System.out.println("Amount of eyes are : " + amountOfEyes(amountOfHeads) + " eyes.");
 		
 		// The third task
-		
 		char letter = 'a';
+		
 		System.out.println("Is the letter vowel (option one)? - " + isVowelOptionOne(letter));
 		System.out.println("Is the letter vowel (option two)? - " + isVowelOptionTwo(letter));
 		System.out.println("Is the letter vowel (option three)? - " + isVowelOptionThree(letter));
 		System.out.println("Is the letter vowel (option four)? - " + isVowelOptionFour(letter));
 		
 		// The fourth task
-		
 		int day = 31;
 		int month = 12;
 		int year = 2017;
+		
 		int []nextDate = findNextDate(day, month, year);
 		System.out.println("Old date : " + day + "." + month + "." + year);
 		System.out.println("New date : " + nextDate[0] + "." + nextDate[1] + "." + nextDate[2]);
