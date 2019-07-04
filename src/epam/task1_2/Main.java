@@ -72,12 +72,25 @@ public class Main {
 	
 	//The third task 
 	public static boolean isVowelOptionOne(char letter) {
-		char []arrayVowelLetter = {'a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'};
+		letter = Character.toLowerCase(letter);
+		char []arrayVowelLetter = {'a', 'e', 'i', 'o', 'u'};
 		for(int i = 0; i < arrayVowelLetter.length; i++) {
 			if(letter == arrayVowelLetter[i]) {
 				return true;
 			}
 		}
+		return false;
+	}
+	
+	public static boolean isVowelOptionTwo(char letter){
+		return false;
+	}
+	
+	public static boolean isVowelOptionThree(char letter){
+		return false;
+	}
+	
+	public static boolean isVowelOptionFour(char letter){
 		return false;
 	}
 	
@@ -191,13 +204,16 @@ public class Main {
 		// The second task
 		int age = 500;
 		int amountOfHeads = amountOfHeads(age);
-		System.out.println("Amount of heads are : " + amountOfHeads + "heads.");
-		System.out.println("Amount of eyes are : " + amountOfEyes(amountOfHeads) + "eyes.");
+		System.out.println("Amount of heads are : " + amountOfHeads + " heads.");
+		System.out.println("Amount of eyes are : " + amountOfEyes(amountOfHeads) + " eyes.");
 		
 		// The third task
 		
 		char letter = 'a';
-		System.out.println("Is the letter vowel? - " + isVowelOptionOne(letter));
+		System.out.println("Is the letter vowel (option one)? - " + isVowelOptionOne(letter));
+		System.out.println("Is the letter vowel (option two)? - " + isVowelOptionTwo(letter));
+		System.out.println("Is the letter vowel (option three)? - " + isVowelOptionThree(letter));
+		System.out.println("Is the letter vowel (option four)? - " + isVowelOptionFour(letter));
 		
 		// The fourth task
 		
