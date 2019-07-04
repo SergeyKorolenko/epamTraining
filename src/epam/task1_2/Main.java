@@ -221,7 +221,8 @@ public class Main {
 		int month = 12;
 		int year = 2017;
 		int []nextDate = findNextDate(day, month, year);
-		System.out.println(nextDate[0] + "." + nextDate[1] + "." + nextDate[2]);
+		System.out.println("Old date : " + day + "." + month + "." + year);
+		System.out.println("New date : " + nextDate[0] + "." + nextDate[1] + "." + nextDate[2]);
 		
 	}
 }
