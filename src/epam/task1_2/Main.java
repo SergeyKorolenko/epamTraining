@@ -10,17 +10,14 @@ public class Main {
 	private static final double ACCURACY = 0.00001;
 	
 	// The first task
-	public static boolean[] isTriangle(double x1, double y1, double x2, double y2, double x3, double y3) {
-		boolean []is = new boolean[2];
+	public static boolean isTriangle(double x1, double y1, double x2, double y2, double x3, double y3) {
 		if(x1 == x2 && x1 == x3){
-			return is;
+			return false;
 		}
 		if(y1 == y2 && y1 == y2){
-			return is;
+			return false;
 		}
-		is[0] = true;
-		is[1] = isRightTriangle(x1, y1, x2, y2, x3, y3);
-		return is;
+		return true;
 	}
 	
 	public static boolean isRightTriangle(double x1, double y1, double x2, double y2, double x3, double y3){
@@ -114,25 +111,36 @@ public class Main {
 	}
 	
 	// The fourth task
+	public static boolean isRightNumbersOfDate(int day, int month, int year) {
+		return (day > 0 && day <= 31 && month > 0 && month <=12  && year >= 0) ? true : false;
+	}
+	
+	public static boolean isLeapYear(int year) {
+		if(year % 4 == 0 && year % 100 != 0) {
+			return true;
+		} else if(year % 4 == 0 && year % 100 == 0) {
+			return false;
+		} else if(year % 4 == 0 && year % 100 == 0 && year % 400 == 0) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+	
 	public static int[] findNextDate(int day, int month, int year){
 		int []newDate = new int[3];
-		int tempCountOfDays = 0;
-		if(day > 0 && day <= 31 && month > 0 && month <=12) {
-			if(year % 4 == 0 && year % 100 != 0){
-				tempCountOfDays = checkMonth(month, true);
-				newDate = calculateNewDate(day, month, tempCountOfDays, year);
-			}else if(year % 4 == 0 && year % 100 == 0){
-				tempCountOfDays = checkMonth(month, false);
-				newDate = calculateNewDate(day, month, tempCountOfDays, year);
-			}else if(year % 4 == 0 && year % 100 == 0 && year % 400 == 0){
-				tempCountOfDays = checkMonth(month, true);
-				newDate = calculateNewDate(day, month, tempCountOfDays, year);
-			} else {
-				tempCountOfDays = checkMonth(month, false);
-				newDate = calculateNewDate(day, month, tempCountOfDays, year);
-			}
+		int countOfDays = 0;
+		countOfDays = checkMonth(month, isLeapYear(year));
+		if(isRightDayOfMonth(day, countOfDays)) {
+			newDate = calculateNewDate(day, month, countOfDays, year);
+		} else {
+			System.out.println("Incorrect date : date will be reset.");
 		}
 		return newDate;
+	}
+	
+	public static boolean isRightDayOfMonth(int day, int countOfDays) {
+		return day <= countOfDays ? true: false;
 	}
 	
 	private static int checkMonth(int month, boolean year) {
@@ -166,9 +174,6 @@ public class Main {
 	
 	private static int[] calculateNewDate(int day, int month, int amountOfDays, int year) {
 		int []finalDate = new int[3];
-		if(day > amountOfDays){
-			return finalDate;
-		}
 		if(day == amountOfDays) {
 			if(month == 12){
 				finalDate[0] = 1;
@@ -196,9 +201,11 @@ public class Main {
 		double y2 = 3;
 		double x3 = 5;
 		double y3 = 3;
-		boolean []is = isTriangle(x1, y1, x2, y2, x3, y3);
-		System.out.println("Is triangle : " + is[0]);
-		System.out.println("Is right triangle : " + is[1]);
+		boolean isTriangle = isTriangle(x1, y1, x2, y2, x3, y3);
+		System.out.println("Is triangle : " + isTriangle);
+		if(isTriangle) {
+			System.out.println("Is right triangle : " + isRightTriangle(x1, y1, x2, y2, x3, y3));
+		}
 		
 		// The second task
 		int age = 200;
@@ -219,9 +226,10 @@ public class Main {
 		int month = 12;
 		int year = 2017;
 		
-		int []nextDate = findNextDate(day, month, year);
-		System.out.println("Old date : " + day + "." + month + "." + year);
-		System.out.println("New date : " + nextDate[0] + "." + nextDate[1] + "." + nextDate[2]);
-		
+		if(isRightNumbersOfDate( day, month, year)) {
+			int []nextDate = findNextDate(day, month, year);
+			System.out.println("Old date : " + day + "." + month + "." + year);
+			System.out.println("New date : " + nextDate[0] + "." + nextDate[1] + "." + nextDate[2]);
+		}		
 	}
 }
