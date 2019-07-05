@@ -139,6 +139,12 @@ public class Main {
 		int amountOfDays = 1;
 		switch(month){
 			case 1:
+			case 3:
+			case 5:
+			case 7:
+			case 8:
+			case 10:
+			case 12: 
 				amountOfDays = 31;
 				break;
 			case 2:
@@ -148,35 +154,11 @@ public class Main {
 					amountOfDays = 28;
 				}
 				break;
-			case 3:
-				amountOfDays = 31;
-				break;
 			case 4:
-				amountOfDays = 30;
-				break;
-			case 5:
-				amountOfDays = 31;
-				break;
 			case 6:
-				amountOfDays = 30;
-				break;
-			case 7:
-				amountOfDays = 31;
-				break;
-			case 8:
-				amountOfDays = 31;
-				break;
 			case 9:
-				amountOfDays = 30;
-				break;
-			case 10:
-				amountOfDays = 31;
-				break;
 			case 11:
 				amountOfDays = 30;
-				break;
-			case 12:
-				amountOfDays = 31;
 				break;
 		}
 		return amountOfDays;
