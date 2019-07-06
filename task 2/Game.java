@@ -19,10 +19,11 @@ public class Game {
 				tailsAmount++;
 			}
 		}
-		printResult(headsAmount, tailsAmount);
+		printResult(shotsAmount, headsAmount, tailsAmount);
 	}
 	
-	public static void printResult(int headsAmount, int tailsAmount) {
+	public static void printResult(int shotsAmount, int headsAmount, int tailsAmount) {
+		System.out.println("Amount of shots are " + shotsAmount);
 		System.out.println("Amount of heads are " + headsAmount);
 		System.out.println("Amount of tails are " + tailsAmount);
 	}
