@@ -5,28 +5,23 @@ import java.util.Scanner;
 
 public class Algorithms {
 	
+	private static Scanner SCANNER = new Scanner(System.in);
 	private static Random RANDOM = new Random(); 
 	private static final int START = 1;
 	private static final int END = Integer.MAX_VALUE;
 	private static final int DIVIDER = 10;
 	private static final int FIRST_NATURAL_NUMBER = 1;
 	private static final int AMOUNT_DIVIDERS_FOR_SIMPLE_NUMBER = 2;
-	private static final int FACTOR = 2;
 	
 	public static int enterNumber(){
-		Scanner scanner = new Scanner(System.in);
 		int number;
 		System.out.println("Enter a natural number:");
 		try {
-			number  = scanner.nextInt();
+			number  = SCANNER.nextInt();
 		} catch(Exception e) {
 			System.out.println("Generation of a random natural number...");
 			number = RANDOM.nextInt(END) + START;
-		} finally {
-			if(scanner != null) {
-				scanner.close();
-			}
-		}
+		} 
 		return number;
 	}
 	
@@ -103,43 +98,121 @@ public class Algorithms {
 		for(int i = 1; i < number / 2; i++) {
 			if(isSimple(i)) {
 				if(number % i == 0) {
-					System.out.println(i);
+					System.out.println("Simple divider is " + i);
 				}
 			}
 		}
 	}
 
 	public static int findHOK(int first, int second){
-		boolean temp = true;
-		while(temp) {
-			if(first != second) {
-				first *= FACTOR;
-				second *= FACTOR;
+		final int HOD = findHOD(first, second);
+		return first * second / HOD;
+	}
+	
+	public static int findHOD(int first, int second) {
+		while(first != second) {
+			if(first > second) {
+				first -= second;
 			} else {
-				temp = false;
+				second -= first;
 			}
 		}
 		return first;
 	}
 	
-	public static void findHOD(int first, int second) {
-		
-	}
-	
 	public static int findNumerals(int number) {
-		return 0;
+		int count = 0;
+		boolean zero = true;
+		boolean one = true;
+		boolean two = true;
+		boolean three = true;
+		boolean four = true;
+		boolean fife = true;
+		boolean six = true;
+		boolean seven = true;
+		boolean eight = true;
+		boolean nine = true;
+		while(number > 0) {
+			int last = number % DIVIDER;
+			switch(last) {
+				case 0:
+					if(zero) {
+						zero = false;
+						count++;
+					}
+					break;
+				case 1:
+					if(one) {
+						one = false;
+						count++;
+					}
+					break;
+				case 2:
+					if(two) {
+						two = false;
+						count++;
+					}
+					break;
+				case 3:
+					if(three) {
+						three = false;
+						count++;
+					}
+					break;
+				case 4:
+					if(four) {
+						four = false;
+						count++;
+					}
+					break;
+				case 5:
+					if(fife) {
+						fife = false;
+						count++;
+					}
+					break;
+				case 6:
+					if(six) {
+						six = false;
+						count++;
+					}
+					break;
+				case 7:
+					if(seven) {
+						seven = false;
+						count++;
+					}
+					break;
+				case 8:
+					if(eight) {
+						eight = false;
+						count++;
+					}
+					break;
+				case 9:
+					if(nine) {
+						nine = false;
+						count++;
+					}
+					break;
+			}
+			number /= DIVIDER;
+		}
+		return count;
 	}
 	
 	public static void main(String[] args) {
 		
 		int numberOne = enterNumber();
-		//int numberTwo = enterNumber();
-		if(isNatural(numberOne) /*&& isNatural(numberTwo)*/) {
+		int numberTwo = enterNumber();
+		if(isNatural(numberOne) && isNatural(numberTwo)) {
 			System.out.println("The biggest numeral in this number is " + findBigNumeral(numberOne));
 			System.out.println("Is this number simple? - " + isSimple(numberOne));	
 			System.out.println("Is this number palindrome? - " + isPalindrome(numberOne));
 			findSimpleDividers(numberOne);
-			System.out.println("HOK is? - " + findHOK(6, 8));
+			System.out.println("HOK is - " + findHOK(numberOne, numberTwo));
+			System.out.println("HOD is - " + findHOD(numberOne, numberTwo));
+			System.out.println("Amount of different numerals in this number is - " + findNumerals(1233));
 		} else {
 			System.out.println("Incorrect data.");
 		}
