@@ -19,6 +19,10 @@ public class PerfectNumber {
 		} catch(Exception e) {
 			System.out.println("Generation of a random natural number...");
 			number = RANDOM.nextInt(END) + START;
+		} finally {
+			if(scanner != null) {
+				scanner.close();
+			}
 		}
 		return number;
 	}
