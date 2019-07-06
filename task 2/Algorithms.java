@@ -83,15 +83,12 @@ public class Algorithms {
 			return false;
 		}
 		int temp = AMOUNT_DIVIDERS_FOR_SIMPLE_NUMBER;
-		for(int i = temp; i < number / 2 && temp == AMOUNT_DIVIDERS_FOR_SIMPLE_NUMBER; i++) {
+		for(int i = temp; i < number / 2; i++) {
 			if(number % i == 0) {
-				temp++; // There is option to do return false;
+				return false;
 			}
 		}
-		if(temp == AMOUNT_DIVIDERS_FOR_SIMPLE_NUMBER) {
-			return true;
-		}
-		return false; // And this true
+		return true;
 	}
 	
 	public static void findSimpleDividers(int number){
