@@ -12,6 +12,7 @@ public class Algorithms {
 	private static final int DIVIDER = 10;
 	private static final int FIRST_NATURAL_NUMBER = 1;
 	private static final int AMOUNT_DIVIDERS_FOR_SIMPLE_NUMBER = 2;
+	private static final int MULTY = 2;
 	
 	public static int enterNumber(){
 		int number;
@@ -83,7 +84,7 @@ public class Algorithms {
 			return false;
 		}
 		int temp = AMOUNT_DIVIDERS_FOR_SIMPLE_NUMBER;
-		for(int i = temp; i < number / 2; i++) {
+		for(int i = temp; i < number / MULTY; i++) {
 			if(number % i == 0) {
 				return false;
 			}
@@ -92,7 +93,7 @@ public class Algorithms {
 	}
 	
 	public static void findSimpleDividers(int number){
-		for(int i = 1; i < number / 2; i++) {
+		for(int i = 1; i < number / MULTY; i++) {
 			if(isSimple(i)) {
 				if(number % i == 0) {
 					System.out.println("Simple divider is " + i);
@@ -203,13 +204,13 @@ public class Algorithms {
 		int numberOne = enterNumber();
 		int numberTwo = enterNumber();
 		if(isNatural(numberOne) && isNatural(numberTwo)) {
-			System.out.println("The biggest numeral in this number is " + findBigNumeral(numberOne));
-			System.out.println("Is this number simple? - " + isSimple(numberOne));	
-			System.out.println("Is this number palindrome? - " + isPalindrome(numberOne));
+			System.out.println("The biggest numeral of " + numberOne + " is " + findBigNumeral(numberOne));
+			System.out.println("Is " + numberOne + " simple? - " + isSimple(numberOne));	
+			System.out.println("Is " + numberOne + " palindrome? - " + isPalindrome(numberOne));
 			findSimpleDividers(numberOne);
-			System.out.println("HOK is - " + findHOK(numberOne, numberTwo));
-			System.out.println("HOD is - " + findHOD(numberOne, numberTwo));
-			System.out.println("Amount of different numerals in this number is - " + findNumerals(1233));
+			System.out.println("HOK " + numberOne + " and " + numberTwo + " is - " + findHOK(numberOne, numberTwo));
+			System.out.println("HOK " + numberOne + " and " + numberTwo + " is - " + findHOD(numberOne, numberTwo));
+			System.out.println("Amount of different numerals of" + numberOne + " is - " + findNumerals(numberOne));
 		} else {
 			System.out.println("Incorrect data.");
 		}
