@@ -13,7 +13,7 @@ public class PerfectNumber {
 	public static int enterNumber(){
 		Scanner scanner = new Scanner(System.in);
 		int number;
-		System.out.println("Enter a natural number :");
+		System.out.println("Enter a natural number:");
 		try {
 			number  = scanner.nextInt();
 		} catch(Exception e) {
@@ -25,6 +25,10 @@ public class PerfectNumber {
 			}
 		}
 		return number;
+	}
+	
+	public static boolean isNatural(int number) {
+		return number >= 1 ? true : false;
 	}
 
 	public static boolean isFerfectNumber(int number) {
@@ -42,14 +46,18 @@ public class PerfectNumber {
 	}
 	
 	public static void printResult(int number, boolean result) {
-		System.out.println("Is " + number + " ferfect number? - " + result);
+		System.out.println("Is " + number + " ferfect number? - " + result + ".");
 	}
 	
 	public static void main(String[] args) {
 		
 		int number = enterNumber();
-		boolean result = isFerfectNumber(number);
-		printResult(number, result);
+		if(isNatural(number)) {
+			boolean result = isFerfectNumber(number);
+			printResult(number, result);
+		} else {
+			System.out.println("Incorrect data.");
+		}
 
 	}
 
