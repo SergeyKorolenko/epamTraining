@@ -1,30 +1,11 @@
 package epam.task2;
 
-import java.util.Random;
-import java.util.Scanner;
-
 public class Algorithms {
 	
-	private static Scanner SCANNER = new Scanner(System.in);
-	private static Random RANDOM = new Random(); 
-	private static final int START = 1;
-	private static final int END = Integer.MAX_VALUE;
 	private static final int DIVIDER = 10;
 	private static final int FIRST_NATURAL_NUMBER = 1;
 	private static final int AMOUNT_DIVIDERS_FOR_SIMPLE_NUMBER = 2;
 	private static final int MULTY = 2;
-	
-	public static int enterNumber(){
-		int number;
-		System.out.println("Enter a natural number:");
-		try {
-			number  = SCANNER.nextInt();
-		} catch(Exception e) {
-			System.out.println("Generation of a random natural number...");
-			number = RANDOM.nextInt(END) + START;
-		} 
-		return number;
-	}
 	
 	public static boolean isNatural(int number) {
 		return number >= 1 ? true : false;
@@ -201,8 +182,8 @@ public class Algorithms {
 	
 	public static void main(String[] args) {
 		
-		int numberOne = enterNumber();
-		int numberTwo = enterNumber();
+		int numberOne = 1234;
+		int numberTwo = 55;
 		if(isNatural(numberOne) && isNatural(numberTwo)) {
 			System.out.println("The biggest numeral of " + numberOne + " is " + findBigNumeral(numberOne));
 			System.out.println("Is " + numberOne + " simple? - " + isSimple(numberOne));	

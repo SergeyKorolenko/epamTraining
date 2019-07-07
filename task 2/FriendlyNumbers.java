@@ -1,38 +1,15 @@
 package epam.task2;
 
-import java.util.Random;
-import java.util.Scanner;
-
 public class FriendlyNumbers {
 	
-	private static Random RANDOM = new Random();
-	private static final int START = 200;
-	private static final int END = 10000;
-	
-	public static int enterNumber(){
-		Scanner scanner = new Scanner(System.in);
-		int number;
-		System.out.println("Enter a natural number:");
-		try {
-			number  = scanner.nextInt();
-		} catch(Exception e) {
-			System.out.println("Generation of a random natural number...");
-			number = RANDOM.nextInt(END) + START;
-		} finally {
-			if(scanner != null) {
-				scanner.close();
-			}
-		}
-		return number;
-	}
+	private static final int DIVIDER = 2;
 	
 	public static int calculateSum(int number) {
 		int sumDividers = 0;
-		for(int i = 1; i <= number / 2; i++) {
+		for(int i = 1; i <= number / DIVIDER; i++) {
 			if(number % i == 0 ) {
 				sumDividers += i;
-			}
-			
+			}	
 		}
 		return sumDividers;
 	}
@@ -57,13 +34,13 @@ public class FriendlyNumbers {
 	}
 	
 	public static boolean isNatural(int number) {
-		return number >= 1 ? true : false;
+		return number >= 1;
 	}
 	
 	public static void main(String[] args) {
 		
-		int start = enterNumber();
-		int end = enterNumber();
+		int start = 100;
+		int end = 1000;
 		if(isNatural(start) && isNatural(end) && start < end) {
 			findNumbers(start, end);
 		} else {
