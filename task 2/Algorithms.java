@@ -64,7 +64,7 @@ public class Algorithms {
 			return false;
 		}
 		int temp = AMOUNT_DIVIDERS_FOR_SIMPLE_NUMBER;
-		for(int i = temp; i < number / MULTY; i++) {
+		for(int i = temp; i <= number / MULTY; i++) {
 			if(number % i == 0) {
 				return false;
 			}
@@ -74,7 +74,7 @@ public class Algorithms {
 	
 	// task 2.4
 	public static void findSimpleDividers(int number){
-		for(int i = 1; i < number / MULTY; i++) {
+		for(int i = 1; i <= number / MULTY; i++) {
 			if(isSimple(i)) {
 				if(number % i == 0) {
 					System.out.println("Simple divider is " + i);
@@ -134,7 +134,7 @@ public class Algorithms {
 			findSimpleDividers(numberOne);
 			System.out.println("HOK " + numberOne + " and " + numberTwo + " is - " + findHOK(numberOne, numberTwo));
 			System.out.println("HOK " + numberOne + " and " + numberTwo + " is - " + findHOD(numberOne, numberTwo));
-			System.out.println("Amount of different numerals of" + numberOne + " is - " + findAmountNumerals(numberOne));
+			System.out.println("Amount of different numerals of " + numberOne + " is - " + findAmountNumerals(numberOne));
 		} else {
 			System.out.println("Incorrect data.");
 		}
