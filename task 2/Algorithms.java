@@ -6,9 +6,21 @@ public class Algorithms {
 	private static final int FIRST_NATURAL_NUMBER = 1;
 	private static final int AMOUNT_DIVIDERS_FOR_SIMPLE_NUMBER = 2;
 	private static final int MULTY = 2;
+	private static final int MAX_NUMERAL = 9;
+	private static int FIRST_NUMBER = 121;
+	private static int FIRST_SECOND = 55;
 	
 	public static boolean isNatural(int number) {
 		return number >= 1;
+	}
+	
+	public static int numberSize(int number) {
+		int size = 0;
+		while(number > 0) {
+			size++;
+			number /= DIVIDER;
+		}
+		return size;
 	}
 	
 	// task 2.1
@@ -25,15 +37,6 @@ public class Algorithms {
 	}
 	
 	// task 2.2
-	public static int numberSize(int number) {
-		int size = 0;
-		while(number > 0) {
-			size++;
-			number /= DIVIDER;
-		}
-		return size;
-	}
-	
 	public static int reversNumber(int number) {
 		int size = numberSize(number);
 		int factor = 1;
@@ -52,11 +55,7 @@ public class Algorithms {
 	}
 	
 	public static boolean isPalindrome(int number) {
-		int reversNumber = reversNumber(number);
-		if(number == reversNumber) {
-			return true;
-		}
-		return false;
+		return number == reversNumber(number);
 	}
 	
 	// task 2.3
@@ -73,6 +72,7 @@ public class Algorithms {
 		return true;
 	}
 	
+	// task 2.4
 	public static void findSimpleDividers(int number){
 		for(int i = 1; i < number / MULTY; i++) {
 			if(isSimple(i)) {
@@ -83,6 +83,7 @@ public class Algorithms {
 		}
 	}
 
+	// task 2.5
 	public static int findHOK(int first, int second){
 		final int HOD = findHOD(first, second);
 		return first * second / HOD;
@@ -99,91 +100,33 @@ public class Algorithms {
 		return first;
 	}
 	
-	public static int findNumerals(int number) {
-		int count = 0;
-		boolean zero = true;
-		boolean one = true;
-		boolean two = true;
-		boolean three = true;
-		boolean four = true;
-		boolean fife = true;
-		boolean six = true;
-		boolean seven = true;
-		boolean eight = true;
-		boolean nine = true;
-		while(number > 0) {
-			int last = number % DIVIDER;
-			switch(last) {
-				case 0:
-					if(zero) {
-						zero = false;
-						count++;
-					}
-					break;
-				case 1:
-					if(one) {
-						one = false;
-						count++;
-					}
-					break;
-				case 2:
-					if(two) {
-						two = false;
-						count++;
-					}
-					break;
-				case 3:
-					if(three) {
-						three = false;
-						count++;
-					}
-					break;
-				case 4:
-					if(four) {
-						four = false;
-						count++;
-					}
-					break;
-				case 5:
-					if(fife) {
-						fife = false;
-						count++;
-					}
-					break;
-				case 6:
-					if(six) {
-						six = false;
-						count++;
-					}
-					break;
-				case 7:
-					if(seven) {
-						seven = false;
-						count++;
-					}
-					break;
-				case 8:
-					if(eight) {
-						eight = false;
-						count++;
-					}
-					break;
-				case 9:
-					if(nine) {
-						nine = false;
-						count++;
-					}
-					break;
+	// task 2.6
+	public static int findAmountNumerals(int number) {
+		int amount = 0;
+		for(int i = 0; i <= MAX_NUMERAL; i++) {
+			if(isNumeral(number, i)) {
+				amount++;
+			}
+		}
+		return amount;
+	}
+	
+	public static boolean isNumeral(int number, int numeral) {
+		int size = numberSize(number);
+		for(int i = 0; i < size; i++) {
+			int tempNumeral = number % DIVIDER;
+			if(tempNumeral == numeral) {
+				return true;
 			}
 			number /= DIVIDER;
 		}
-		return count;
+		return false;
 	}
 	
 	public static void main(String[] args) {
 		
-		int numberOne = 1234;
-		int numberTwo = 55;
+		int numberOne = FIRST_NUMBER;
+		int numberTwo = FIRST_SECOND;
 		if(isNatural(numberOne) && isNatural(numberTwo)) {
 			System.out.println("The biggest numeral of " + numberOne + " is " + findBigNumeral(numberOne));
 			System.out.println("Is " + numberOne + " simple? - " + isSimple(numberOne));	
@@ -191,7 +134,7 @@ public class Algorithms {
 			findSimpleDividers(numberOne);
 			System.out.println("HOK " + numberOne + " and " + numberTwo + " is - " + findHOK(numberOne, numberTwo));
 			System.out.println("HOK " + numberOne + " and " + numberTwo + " is - " + findHOD(numberOne, numberTwo));
-			System.out.println("Amount of different numerals of" + numberOne + " is - " + findNumerals(numberOne));
+			System.out.println("Amount of different numerals of" + numberOne + " is - " + findAmountNumerals(numberOne));
 		} else {
 			System.out.println("Incorrect data.");
 		}
