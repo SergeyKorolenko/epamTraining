@@ -8,7 +8,7 @@ public class Algorithms {
 	private static final int MULTY = 2;
 	
 	public static boolean isNatural(int number) {
-		return number >= 1 ? true : false;
+		return number >= 1;
 	}
 	
 	// task 2.1

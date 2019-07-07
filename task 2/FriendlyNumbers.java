@@ -3,6 +3,8 @@ package epam.task2;
 public class FriendlyNumbers {
 	
 	private static final int DIVIDER = 2;
+	private static int START = 100;
+	private static int END = 1000;
 	
 	public static int calculateSum(int number) {
 		int sumDividers = 0;
@@ -39,8 +41,8 @@ public class FriendlyNumbers {
 	
 	public static void main(String[] args) {
 		
-		int start = 100;
-		int end = 1000;
+		int start = START;
+		int end = END;
 		if(isNatural(start) && isNatural(end) && start < end) {
 			findNumbers(start, end);
 		} else {

@@ -3,6 +3,7 @@ package epam.task2;
 public class PerfectNumber {
 	
 	private static final int DIVIDER = 2;
+	private static int NUMBER = 496;
 	
 	public static boolean isNatural(int number) {
 		return number >= 1;
@@ -28,7 +29,7 @@ public class PerfectNumber {
 	
 	public static void main(String[] args) {
 		
-		int number = 496;
+		int number = NUMBER;
 		if(isNatural(number)) {
 			boolean result = isFerfectNumber(number);
 			printResult(number, result);

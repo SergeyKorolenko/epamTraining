@@ -5,8 +5,8 @@ import java.util.Random;
 public class Game {
 	
 	private static Random RANDOM = new Random();
-	private static final int START = 100;
-	private static final int END = 1000;
+	private static int START = 100;
+	private static int END = 1000;
 	
 	public static void countHeadsTails() {
 		int headsAmount = 0;
