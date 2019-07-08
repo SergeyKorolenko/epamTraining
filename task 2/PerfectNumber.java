@@ -14,8 +14,7 @@ public class PerfectNumber {
 		for(int i = 1; i <= number / DIVIDER; i++) {
 			if(number % i == 0 ) {
 				sumDividers += i;
-			}
-			
+			}	
 		}
 		if(number == sumDividers) {
 			return true;

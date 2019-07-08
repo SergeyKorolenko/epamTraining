@@ -17,15 +17,18 @@ public class FriendlyNumbers {
 	}
 	
 	public static void findNumbers(int start, int end) {
-		boolean is;
+		boolean is = false;
 		for(int i = start; i <= end; i++) {
-			is = false;
+			int sumDividers = calculateSum(i);
 			for(int j = i + 1; j <= end && i != j; j++) {
-				if(calculateSum(i) == j && calculateSum(j) == i ){
+				if(sumDividers == j && calculateSum(j) == i ){
 					is = true;
 					printResult(i, j, is);
 				}
 			}
+		}
+		if(!is) {
+			printResult(start, end, is);
 		}
 	}
 	
@@ -33,7 +36,7 @@ public class FriendlyNumbers {
 		if(is) {
 			System.out.println("The numbers " + first + " and " + second + " are friendly.");
 		} else {
-			System.out.println("There are not friendly numbers.");
+			System.out.println("There are no friendly numbers in range from " + first + " to " + second + ".");
 		}
 	}
 	
