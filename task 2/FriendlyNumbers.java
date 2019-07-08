@@ -3,8 +3,8 @@ package epam.task2;
 public class FriendlyNumbers {
 	
 	private static final int DIVIDER = 2;
-	private static int START = 100;
-	private static int END = 1000;
+	private static int START = 200;
+	private static int END = 3000;
 	
 	public static int calculateSum(int number) {
 		int sumDividers = 0;
@@ -17,12 +17,13 @@ public class FriendlyNumbers {
 	}
 	
 	public static void findNumbers(int start, int end) {
-		boolean is = false;
+		boolean is;
 		for(int i = start; i <= end; i++) {
+			is = false;
 			for(int j = i + 1; j <= end && i != j; j++) {
 				if(calculateSum(i) == j && calculateSum(j) == i ){
-					printResult(i, j, is);
 					is = true;
+					printResult(i, j, is);
 				}
 			}
 		}
@@ -31,8 +32,9 @@ public class FriendlyNumbers {
 	public static void printResult(int first, int second, boolean is) {
 		if(is) {
 			System.out.println("The numbers " + first + " and " + second + " are friendly.");
+		} else {
+			System.out.println("There are not friendly numbers.");
 		}
-		System.out.println("There are not friendly numbers.");
 	}
 	
 	public static boolean isNatural(int number) {
