@@ -133,7 +133,7 @@ public class Algorithms {
 			System.out.println("Is " + numberOne + " palindrome? - " + isPalindrome(numberOne));
 			findSimpleDividers(numberOne);
 			System.out.println("HOK " + numberOne + " and " + numberTwo + " is - " + findHOK(numberOne, numberTwo));
-			System.out.println("HOK " + numberOne + " and " + numberTwo + " is - " + findHOD(numberOne, numberTwo));
+			System.out.println("HOD " + numberOne + " and " + numberTwo + " is - " + findHOD(numberOne, numberTwo));
 			System.out.println("Amount of different numerals of " + numberOne + " is - " + findAmountNumerals(numberOne));
 		} else {
 			System.out.println("Incorrect data.");
