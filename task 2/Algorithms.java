@@ -8,7 +8,7 @@ public class Algorithms {
 	private static final int MULTY = 2;
 	private static final int MAX_NUMERAL = 9;
 	private static int FIRST_NUMBER = 121;
-	private static int FIRST_SECOND = 55;
+	private static int SECOND_NUMBER = 55;
 	
 	public static boolean isNatural(int number) {
 		return number >= 1;
@@ -126,7 +126,7 @@ public class Algorithms {
 	public static void main(String[] args) {
 		
 		int numberOne = FIRST_NUMBER;
-		int numberTwo = FIRST_SECOND;
+		int numberTwo = SECOND_NUMBER;
 		if(isNatural(numberOne) && isNatural(numberTwo)) {
 			System.out.println("The biggest numeral of " + numberOne + " is " + findBigNumeral(numberOne));
 			System.out.println("Is " + numberOne + " simple? - " + isSimple(numberOne));	
