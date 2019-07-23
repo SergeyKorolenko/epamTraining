@@ -1,5 +1,7 @@
 package by.epam.task3.util;
 
+import java.util.Random;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -11,6 +13,9 @@ import org.apache.logging.log4j.Logger;
 public class Matrices {
 	
 	private final static Logger LOG = LogManager.getLogger(Arrays.class.getName());
+	private final static Random RANDOM = new Random();
+	private final static double START = 1.0;
+	private final static double END = 100.0;
 	
 	/**
 	 * This method checks a matrix on null or zero length. Use this method  before using other methods 
@@ -315,9 +320,9 @@ public class Matrices {
 	 * {@code false} otherwise;
 	 */
 	private static boolean isMax(double[][] m, int i, int j) {
-		if(m[i][j] > m[i-1][j-1] && m[i][i] > m[i-1][j] && m[i][j] > m[i-1][j+1]
-				&& m[i][j] > m[i][j-1] && m[i][j] > m[i][j+1] && m[i][j] > m[i+1][j-1]
-						&& m[i][j] > m[i+1][j] && m[i][j] > m[i+1][j+1]){
+		if(m[i][j] > m[i-1][j-1] && m[i][j] > m[i-1][j] && m[i][j] > m[i-1][j+1] 
+				&& m[i][j] > m[i][j-1] && m[i][j] > m[i][j+1] 
+				&& m[i][j] > m[i+1][j-1] && m[i][j] > m[i+1][j] && m[i][j] > m[i+1][j+1]){
 			return true;
 		}
 		return false;
@@ -363,9 +368,9 @@ public class Matrices {
 	 * {@code false} otherwise; 
 	 */
 	private static boolean isMin(double[][] m, int i, int j) {
-		if(m[i][j] < m[i-1][j-1] && m[i][i] < m[i-1][j] && m[i][j] < m[i-1][j+1]
-				&& m[i][j] < m[i][j-1] && m[i][j] < m[i][j+1] && m[i][j] < m[i+1][j-1]
-						&& m[i][j] < m[i+1][j] && m[i][j] < m[i+1][j+1]){
+		if(m[i][j] < m[i-1][j-1] && m[i][j] < m[i-1][j] && m[i][j] < m[i-1][j+1] 
+				&& m[i][j] < m[i][j-1] && m[i][j] < m[i][j+1] 
+				&& m[i][j] < m[i+1][j-1] && m[i][j] < m[i+1][j] && m[i][j] < m[i+1][j+1]){
 			return true;
 		}
 		return false;
@@ -389,13 +394,22 @@ public class Matrices {
 		for(int i = 0; i < matrix.length; i++) {
 			for(int j = 0; j < matrix[i].length; j++) {
 				if(j == matrix[i].length - 1) {
-					result.append(matrix[i][j]);
+					result.append(matrix[i][j] + "\n");
 				}else {
 					result.append(matrix[i][j] + " ");
 				}
 			}
 		}
 		return result.toString();
+	}
+	
+	public static void fill(double[][] matrix) {
+		for(int i = 0; i < matrix.length; i++) {
+			for(int j = 0; j < matrix[i].length; j++) {
+				matrix[i][j] = RANDOM.nextDouble() * END + START;
+			}
+		}
+		LOG.info("The matrix has bee filled");
 	}
 	
 }
