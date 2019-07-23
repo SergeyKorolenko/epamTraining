@@ -1,0 +1,60 @@
+[INFO ] 2019-07-23 21:06:07.217 [main] Arrays - The matrix has been transposed
+[INFO ] 2019-07-23 21:06:07.221 [main] Arrays - Is the matrix symmetry about the secondary diagonal: true
+[INFO ] 2019-07-23 21:06:07.221 [main] Arrays - Is the matrix symmetry about the secondary diagonal: false
+[INFO ] 2019-07-23 21:06:07.221 [main] Arrays - The coordinates of the local max of the matrix are [1, 1]
+[INFO ] 2019-07-23 21:06:07.223 [main] Arrays - The coordinates of the local max of the matrix are [-1, -1]
+[INFO ] 2019-07-23 21:06:07.223 [main] Arrays - The coordinates of the local max of the matrix are [2, 1]
+[INFO ] 2019-07-23 21:06:07.223 [main] Arrays - The coordinates of the local min of the matrix are [-1, -1]
+[INFO ] 2019-07-23 21:06:07.224 [main] Arrays - The coordinates of the local min of the matrix are [1, 1]
+[INFO ] 2019-07-23 21:06:07.224 [main] Arrays - The coordinates of the local min of the matrix are [1, 2]
+[INFO ] 2019-07-23 21:06:07.224 [main] Arrays - Is the matrix symmetry about the the main diagonal: true
+[INFO ] 2019-07-23 21:06:07.224 [main] Arrays - Is the matrix symmetry about the the main diagonal: false
+[INFO ] 2019-07-23 21:06:07.225 [main] Arrays - The matrix does not exist or has zero length
+[INFO ] 2019-07-23 21:06:07.225 [main] Arrays - The matrix does not exist or has zero length
+[INFO ] 2019-07-23 21:06:07.225 [main] Arrays - Are all elements of the matrix identical: false
+[INFO ] 2019-07-23 21:06:07.226 [main] Arrays - The coordinates of the max element are [1, 1]
+[INFO ] 2019-07-23 21:06:07.226 [main] Arrays - Are all elements of the matrix identical: false
+[INFO ] 2019-07-23 21:06:07.226 [main] Arrays - The coordinates of the max element are [2, 1]
+[INFO ] 2019-07-23 21:06:07.226 [main] Arrays - Are all elements of the matrix identical: false
+[INFO ] 2019-07-23 21:06:07.226 [main] Arrays - The coordinates of the max element are [2, 3]
+[INFO ] 2019-07-23 21:06:07.227 [main] Arrays - Are all elements of the matrix identical: false
+[INFO ] 2019-07-23 21:06:07.227 [main] Arrays - The coordinates of the min element are [0, 1]
+[INFO ] 2019-07-23 21:06:07.227 [main] Arrays - Are all elements of the matrix identical: false
+[INFO ] 2019-07-23 21:06:07.227 [main] Arrays - The coordinates of the min element are [1, 1]
+[INFO ] 2019-07-23 21:06:07.227 [main] Arrays - Are all elements of the matrix identical: false
+[INFO ] 2019-07-23 21:06:07.227 [main] Arrays - The coordinates of the min element are [0, 0]
+[INFO ] 2019-07-23 21:06:07.229 [main] Arrays - Does the array [1.0, 2.0, 3.0, 4.0, 5.0] form the strict decreasing sequence: false
+[INFO ] 2019-07-23 21:06:07.229 [main] Arrays - Does the array [5.0, 4.0, 3.0, 2.0, 1.0] form the strict decreasing sequence: true
+[INFO ] 2019-07-23 21:06:07.230 [main] Arrays - Does the array [5.0, 5.0, 3.0, 2.0, 1.0] form the strict decreasing sequence: false
+[INFO ] 2019-07-23 21:06:07.231 [main] Arrays - The arithmetic mean of the array [11.9, 2.3, 1.6, 0.8, 5.7] is 4.459999999999999
+[INFO ] 2019-07-23 21:06:07.232 [main] Arrays - The arithmetic mean of the array [5.0, 5.0, 5.0, 5.0, 5.0] is 5.0
+[INFO ] 2019-07-23 21:06:07.232 [main] Arrays - The geometric mean of the array [5.0, 5.0, 5.0, 5.0, 5.0] is 5.000000000000001
+[INFO ] 2019-07-23 21:06:07.233 [main] Arrays - The index of the local max elemennt of this array [11.9, 2.3, 1.6, 0.8, 5.7] is -1
+[INFO ] 2019-07-23 21:06:07.233 [main] Arrays - The index of the local max elemennt of this array [11.0] is -1
+[INFO ] 2019-07-23 21:06:07.233 [main] Arrays - The index of the local max elemennt of this array [11.9, 2.3] is -1
+[INFO ] 2019-07-23 21:06:07.233 [main] Arrays - The index of the local max elemennt of this array [23.0, 42.0, 4.0, 16.0, 8.0, 15.0] is 1
+[INFO ] 2019-07-23 21:06:07.234 [main] Arrays - The index of the local min elemennt of this array [11.9, 2.3, 1.6, 0.8, 5.7] is 3
+[INFO ] 2019-07-23 21:06:07.234 [main] Arrays - The index of the local min elemennt of this array [11.0] is -1
+[INFO ] 2019-07-23 21:06:07.234 [main] Arrays - The index of the local min elemennt of this array [11.9, 2.3] is -1
+[INFO ] 2019-07-23 21:06:07.235 [main] Arrays - The index of the local min elemennt of this array [23.0, 42.0, 4.0, 16.0, 8.0, 15.0] is 2
+[INFO ] 2019-07-23 21:06:07.235 [main] Arrays - The array does not exist or has zero length
+[INFO ] 2019-07-23 21:06:07.235 [main] Arrays - The array does not exist or has zero length
+[INFO ] 2019-07-23 21:06:07.236 [main] Arrays - Does the array [1.0, 2.0, 3.0, 4.0, 5.0] form the decreasing sequence: false
+[INFO ] 2019-07-23 21:06:07.236 [main] Arrays - Does the array [5.0, 4.0, 3.0, 2.0, 1.0] form the decreasing sequence: true
+[INFO ] 2019-07-23 21:06:07.236 [main] Arrays - Does the array [5.0, 5.0, 3.0, 2.0, 1.0] form the decreasing sequence: true
+[INFO ] 2019-07-23 21:06:07.237 [main] Arrays - Does the array [1.0, 2.0, 3.0, 4.0, 5.0] form the strict increasing sequence: true
+[INFO ] 2019-07-23 21:06:07.237 [main] Arrays - Does the array [11.9, 2.3, 1.6, 0.8, 5.7] form the strict increasing sequence: false
+[INFO ] 2019-07-23 21:06:07.237 [main] Arrays - Does the array [1.0, 5.0, 5.0, 5.0, 5.0] form the strict increasing sequence: false
+[INFO ] 2019-07-23 21:06:07.238 [main] Arrays - This array [5.0, 5.0, 5.0, 5.0, 5.0] has identical elements or not: true
+[INFO ] 2019-07-23 21:06:07.238 [main] Arrays - This array [11.9, 2.3, 1.6, 0.8, 5.7] has identical elements or not: false
+[INFO ] 2019-07-23 21:06:07.238 [main] Arrays - The index of the max element of the array [11.9, 2.3, 1.6, 0.8, 5.7] is 0
+[INFO ] 2019-07-23 21:06:07.238 [main] Arrays - This array [1.0, 2.0, 3.0, 4.0, 5.0] has identical elements or not: false
+[INFO ] 2019-07-23 21:06:07.238 [main] Arrays - The index of the max element of the array [1.0, 2.0, 3.0, 4.0, 5.0] is 4
+[INFO ] 2019-07-23 21:06:07.239 [main] Arrays - This array [5.0, 5.0, 5.0, 5.0, 5.0] has identical elements or not: true
+[INFO ] 2019-07-23 21:06:07.239 [main] Arrays - This array [11.9, 2.3, 1.6, 0.8, 5.7] has identical elements or not: false
+[INFO ] 2019-07-23 21:06:07.239 [main] Arrays - The index of the min element of this array [11.9, 2.3, 1.6, 0.8, 5.7] is 3
+[INFO ] 2019-07-23 21:06:07.239 [main] Arrays - This array [1.0, 2.0, 3.0, 4.0, 5.0] has identical elements or not: false
+[INFO ] 2019-07-23 21:06:07.239 [main] Arrays - The index of the min element of this array [1.0, 2.0, 3.0, 4.0, 5.0] is 0
+[INFO ] 2019-07-23 21:06:07.246 [main] Arrays - Does the array [1.0, 2.0, 3.0, 4.0, 5.0] form the increasing sequence: true
+[INFO ] 2019-07-23 21:06:07.247 [main] Arrays - Does the array [11.9, 2.3, 1.6, 0.8, 5.7] form the increasing sequence: false
+[INFO ] 2019-07-23 21:06:07.247 [main] Arrays - Does the array [1.0, 5.0, 5.0, 5.0, 5.0] form the increasing sequence: true
