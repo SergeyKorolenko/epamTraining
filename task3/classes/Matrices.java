@@ -22,7 +22,8 @@ public class Matrices {
 	 * if you do not want to get wrong results or exceptions.
 	 * 
 	 * @param matrix the matrix to be checked
-	 * @return {@code true} if the matrix is null or has zero length; {@code false} otherwise.
+	 * @return {@code true} if the matrix is not null or does not have zero length; 
+	 * {@code false} otherwise.
 	 */
 	public static boolean isMatrix(double[][] matrix) {
 		if(matrix != null && matrix.length != 0) {
@@ -136,7 +137,9 @@ public class Matrices {
 				if(matrix[i][j] <= 0) {
 					flag = false;
 				}
+				j++;
 			}
+			i++;
 		}
 		LOG.info("Are all elements of the matrix positive: " + flag);
 		return flag;

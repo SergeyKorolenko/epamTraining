@@ -22,7 +22,8 @@ public class Arrays {
 	 * methods if you want to get right results.
 	 * 
 	 * @param array the array to be checked
-	 * @return {@code true} if the array is not null or zero length; {@code false} otherwise.
+	 * @return {@code true} if the array is not null or does not have zero length; 
+	 * {@code false} otherwise.
 	 */
 	public static boolean isArray(double[] array) {
 		if(array != null && array.length !=0) {
@@ -110,6 +111,7 @@ public class Arrays {
 			if(array[i] <= 0) {
 				flag = false;
 			}
+			i++;
 		}
 		LOG.info("Are all elements of the array " + Arrays.toString(array) + " positive: " + flag);
 		return flag;
