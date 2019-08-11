@@ -1,18 +1,17 @@
 package by.epam.task4.service;
 
-import by.epam.task4.entities.Aircraft;
-import by.epam.task4.entities.CargoAircraft;
-import by.epam.task4.entities.PassengerAircraft;
+import by.epam.task4.comparator.AircraftHeightComparator;
+import by.epam.task4.comparator.AircraftProducerComparator;
+import by.epam.task4.entity.Aircraft;
+import by.epam.task4.entity.CargoAircraft;
+import by.epam.task4.entity.PassengerAircraft;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.Iterator;
 import java.util.List;
 
 public class AirlineService {
-
-    public static void sort() {
-
-    }
 
     public static int calculateFullCapacity(List<Aircraft> aircraftList) {
         Iterator<Aircraft> it = aircraftList.iterator();
@@ -38,7 +37,8 @@ public class AirlineService {
         return sumLoadCapacity;
     }
 
-    public static List<Aircraft> searchAircraftByFuelConsumption(List<Aircraft> aircraftList, double start, double end) {
+    public static List<Aircraft> searchAircraftByFuelConsumption(List<Aircraft> aircraftList,
+                                                                 double start, double end) {
         List<Aircraft> resultList = new ArrayList<>();
         Iterator<Aircraft> it = aircraftList.iterator();
         while(it.hasNext()) {
@@ -50,8 +50,21 @@ public class AirlineService {
         return resultList;
     }
 
-    public static void sort(List<Aircraft> aircraftList) {
-       //Collections.sort(aircraftList);
+    public static void sortByProducer(List<Aircraft> aircraftList) {
+        Comparator<Aircraft> comparator = new AircraftProducerComparator();
+        aircraftList.sort(comparator);
+    }
+
+    public static void sortByProducerAndHeight(List<Aircraft> aircraftList) {
+        Comparator<Aircraft> comparator = new AircraftProducerComparator().
+                thenComparing(new AircraftHeightComparator());
+        aircraftList.sort(comparator);
+    }
+
+    public static void showList(List<Aircraft> aircraftList) {
+        for(Aircraft aircraft: aircraftList) {
+            System.out.println(aircraft);
+        }
     }
 
 }

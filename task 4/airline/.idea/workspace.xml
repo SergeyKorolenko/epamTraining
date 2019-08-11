@@ -14,10 +14,24 @@
         <option value="Enum" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="JUnit4 Test Class" />
       </list>
     </option>
   </component>
   <component name="ProjectId" id="1OomfbjPeJU0fzXyjqX7x8jDxkR" />
+  <component name="PropertiesComponent">
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="by.epam.task4.parser" />
+      <recent name="by.epam.task4.service" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+  </component>
   <component name="RunDashboard">
     <option name="ruleStates">
       <list>
@@ -30,7 +44,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Main (1)">
+  <component name="RunManager" selected="JUnit.AirlineServiceTest.calculateFullLoadCapacity">
     <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="by.epam.task4.main.Main" />
       <module name="airline" />
@@ -57,8 +71,42 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="AirlineServiceTest.calculateFullCapacity" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="airline" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="by.epam.task4.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="by.epam.task4.service" />
+      <option name="MAIN_CLASS_NAME" value="by.epam.task4.service.AirlineServiceTest" />
+      <option name="METHOD_NAME" value="calculateFullCapacity" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AirlineServiceTest.calculateFullLoadCapacity" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="airline" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="by.epam.task4.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="by.epam.task4.service" />
+      <option name="MAIN_CLASS_NAME" value="by.epam.task4.service.AirlineServiceTest" />
+      <option name="METHOD_NAME" value="calculateFullLoadCapacity" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.AirlineServiceTest.calculateFullLoadCapacity" />
+        <item itemvalue="JUnit.AirlineServiceTest.calculateFullCapacity" />
         <item itemvalue="Application.Main (1)" />
         <item itemvalue="Application.Main" />
       </list>

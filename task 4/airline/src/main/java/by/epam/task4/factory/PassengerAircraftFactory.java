@@ -1,7 +1,7 @@
 package by.epam.task4.factory;
 
-import by.epam.task4.entities.Aircraft;
-import by.epam.task4.entities.PassengerAircraft;
+import by.epam.task4.entity.Aircraft;
+import by.epam.task4.entity.PassengerAircraft;
 
 public class PassengerAircraftFactory implements IAircraftFactory {
     @Override
