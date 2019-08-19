@@ -1,5 +1,8 @@
 package by.epam.task4.entity;
 
+/**
+ * @author Sergei Korolenko
+ */
 public class PassengerAircraft extends Aircraft {
 
     private int capacity;

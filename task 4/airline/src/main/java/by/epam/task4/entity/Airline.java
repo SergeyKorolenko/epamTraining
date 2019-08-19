@@ -2,6 +2,9 @@ package by.epam.task4.entity;
 
 import java.util.List;
 
+/**
+ * @author Sergei Korolenko
+ */
 public class Airline {
 
     private List<Aircraft> aircraftList;

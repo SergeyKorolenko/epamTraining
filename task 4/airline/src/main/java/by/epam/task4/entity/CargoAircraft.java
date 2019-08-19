@@ -1,5 +1,8 @@
 package by.epam.task4.entity;
 
+/**
+ * @author Sergei Korolenko
+ */
 public class CargoAircraft extends Aircraft {
 
     private double loadCapacity;

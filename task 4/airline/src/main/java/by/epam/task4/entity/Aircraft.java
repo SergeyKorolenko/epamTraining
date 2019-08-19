@@ -1,6 +1,9 @@
 package by.epam.task4.entity;
 
-public class Aircraft{
+/**
+ * @author Sergei Korolenko
+ */
+public abstract class Aircraft{
 
     private String producer;
     private String model;
@@ -125,5 +128,4 @@ public class Aircraft{
             return false;
         return true;
     }
-
 }

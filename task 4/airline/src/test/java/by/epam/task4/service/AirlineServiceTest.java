@@ -12,6 +12,9 @@ import java.util.List;
 
 import static org.junit.Assert.*;
 
+/**
+ * @author Sergei Korolenko
+ */
 public class AirlineServiceTest {
 
     private CargoAircraft aircraft1;

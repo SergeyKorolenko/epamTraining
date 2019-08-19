@@ -4,6 +4,9 @@ import by.epam.task4.entity.Aircraft;
 
 import java.util.Comparator;
 
+/**
+ * @author Sergei Korolenko
+ */
 public class AircraftProducerComparator implements Comparator<Aircraft> {
 
     @Override
