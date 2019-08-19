@@ -42,15 +42,10 @@ public class DataReader {
                     Aircraft aircraft = null;
                     switch (type) {
                         case CARGO:
-                            if (dataValidator.isAircraft(type, data)) { ;
-                                aircraftList.add(aircraftFactory.createAircraft(type, data));
-                            }
-                            break;
                         case PASSENGER:
                             if (dataValidator.isAircraft(type, data)) {
                                 aircraftList.add(aircraftFactory.createAircraft(type, data));
                             }
-                            break;
                     }
                 } catch (Exception e) {
                     LOG.error("Incorrect aircraft type", e);

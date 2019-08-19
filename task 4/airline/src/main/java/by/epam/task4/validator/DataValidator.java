@@ -37,7 +37,6 @@ public class DataValidator {
                         LOG.error("Incorrect data value");
                         throw new AircraftParameterException();
                     }
-                    break;
             }
         } catch (NumberFormatException e) {
             LOG.error("Incorrect data type", e);
