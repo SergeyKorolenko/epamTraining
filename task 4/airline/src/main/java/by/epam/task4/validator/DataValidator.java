@@ -13,10 +13,15 @@ public class DataValidator {
 
     private static final Logger LOG = LogManager.getLogger(DataValidator.class);
 
+    /**
+     * This method checks aircraft data for correctness.
+     *
+     * @param type the aircraft type
+     * @param data the array which contains aircraft data
+     * @return true if aircraft data are correct; false otherwise
+     */
     public boolean isAircraft(AircraftType type, String[] data) {
         try {
-            String producer = data[1];
-            String model = data[2];
             int cruisingSpeed = Integer.parseInt(data[3]);
             int maxHeight = Integer.parseInt(data[4]);
             int flightRange = Integer.parseInt(data[5]);

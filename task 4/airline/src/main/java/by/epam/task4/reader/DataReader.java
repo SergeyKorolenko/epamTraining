@@ -39,7 +39,6 @@ public class DataReader {
                 try {
                     String[] data = line.split(SPLITERATOR);
                     AircraftType type = AircraftType.valueOf(data[0].toUpperCase());
-                    Aircraft aircraft = null;
                     switch (type) {
                         case CARGO:
                         case PASSENGER:

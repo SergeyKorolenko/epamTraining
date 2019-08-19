@@ -68,4 +68,6 @@ public class AirlineServiceTest {
         System.out.println(AirlineService.calculateFullLoadCapacity(list));
         assertEquals(AirlineService.calculateFullLoadCapacity(list), 75.1, 0.0);
     }
+
+
 }

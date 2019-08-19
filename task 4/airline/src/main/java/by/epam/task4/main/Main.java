@@ -1,11 +1,8 @@
 package by.epam.task4.main;
 
-import by.epam.task4.entity.Aircraft;
 import by.epam.task4.entity.Airline;
 import by.epam.task4.reader.DataReader;
 import by.epam.task4.service.AirlineService;
-
-import java.util.List;
 
 /**
  * @author Sergei Korolenko

@@ -20,7 +20,6 @@ public class AircraftFactory implements IAircraftFactory {
                 aircraft = new PassengerAircraft(data[1], data[2], Integer.parseInt(data[3]),
                         Integer.parseInt(data[4]), Integer.parseInt(data[5]), Double.parseDouble(data[6]),
                         Integer.parseInt(data[7]));
-                break;
         }
         return aircraft;
     }
