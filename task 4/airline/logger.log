@@ -1,27 +1,31 @@
-[ERROR] 2019-08-19 19:15:15.369 [main] DataReader - Incorrect aircraft type
+[ERROR] 2019-08-21 21:40:57.309 [main] DataReader - Incorrect aircraft type
 java.lang.IllegalArgumentException: No enum constant by.epam.task4.enums.AircraftType.BAD
 	at java.lang.Enum.valueOf(Enum.java:238) ~[?:1.8.0_211]
 	at by.epam.task4.enums.AircraftType.valueOf(AircraftType.java:6) ~[classes/:?]
 	at by.epam.task4.reader.DataReader.readData(DataReader.java:41) [classes/:?]
-	at by.epam.task4.main.Main.main(Main.java:17) [classes/:?]
-[ERROR] 2019-08-19 19:15:15.400 [main] DataValidator - Incorrect data value
-[ERROR] 2019-08-19 19:15:15.400 [main] DataValidator - Data insufficiency
-java.lang.ArrayIndexOutOfBoundsException: 7
-	at by.epam.task4.validator.DataValidator.isAircraft(DataValidator.java:34) [classes/:?]
-	at by.epam.task4.reader.DataReader.readData(DataReader.java:50) [classes/:?]
-	at by.epam.task4.main.Main.main(Main.java:17) [classes/:?]
-[ERROR] 2019-08-19 19:15:15.400 [main] DataValidator - Data insufficiency
-java.lang.ArrayIndexOutOfBoundsException: 1
-	at by.epam.task4.validator.DataValidator.isAircraft(DataValidator.java:18) [classes/:?]
+	at by.epam.task4.main.Main.main(Main.java:14) [classes/:?]
+[ERROR] 2019-08-21 21:40:57.321 [main] DataValidator - Incorrect numeric parameters 
+by.epam.task4.exception.AircraftParameterException
+	at by.epam.task4.validator.DataValidator.isAircraft(DataValidator.java:55) [classes/:?]
 	at by.epam.task4.reader.DataReader.readData(DataReader.java:45) [classes/:?]
-	at by.epam.task4.main.Main.main(Main.java:17) [classes/:?]
-[ERROR] 2019-08-19 19:15:15.400 [main] DataReader - Incorrect aircraft type
+	at by.epam.task4.main.Main.main(Main.java:14) [classes/:?]
+[ERROR] 2019-08-21 21:40:57.326 [main] DataValidator - Data insufficiency
+java.lang.ArrayIndexOutOfBoundsException: 7
+	at by.epam.task4.validator.DataValidator.isAircraft(DataValidator.java:52) [classes/:?]
+	at by.epam.task4.reader.DataReader.readData(DataReader.java:45) [classes/:?]
+	at by.epam.task4.main.Main.main(Main.java:14) [classes/:?]
+[ERROR] 2019-08-21 21:40:57.327 [main] DataValidator - Data insufficiency
+java.lang.ArrayIndexOutOfBoundsException: 1
+	at by.epam.task4.validator.DataValidator.isAircraft(DataValidator.java:33) [classes/:?]
+	at by.epam.task4.reader.DataReader.readData(DataReader.java:45) [classes/:?]
+	at by.epam.task4.main.Main.main(Main.java:14) [classes/:?]
+[ERROR] 2019-08-21 21:40:57.329 [main] DataReader - Incorrect aircraft type
 java.lang.IllegalArgumentException: No enum constant by.epam.task4.enums.AircraftType.NULL
 	at java.lang.Enum.valueOf(Enum.java:238) ~[?:1.8.0_211]
 	at by.epam.task4.enums.AircraftType.valueOf(AircraftType.java:6) ~[classes/:?]
 	at by.epam.task4.reader.DataReader.readData(DataReader.java:41) [classes/:?]
-	at by.epam.task4.main.Main.main(Main.java:17) [classes/:?]
-[ERROR] 2019-08-19 19:15:15.400 [main] DataReader - Incorrect aircraft type
+	at by.epam.task4.main.Main.main(Main.java:14) [classes/:?]
+[ERROR] 2019-08-21 21:40:57.331 [main] DataReader - Incorrect aircraft type
 java.lang.ArrayIndexOutOfBoundsException: 0
 	at by.epam.task4.reader.DataReader.readData(DataReader.java:41) [classes/:?]
-	at by.epam.task4.main.Main.main(Main.java:17) [classes/:?]
+	at by.epam.task4.main.Main.main(Main.java:14) [classes/:?]
